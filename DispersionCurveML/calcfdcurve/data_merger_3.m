@@ -12,5 +12,5 @@ DPR = [dpr1;dpr2];
 Vs = [vs1;vs2];
 clear dpr1 dpr2 vs1 vs2
 
-save DPR1w DPR
-save Vs1w Vs
+save DPRVs DPR Vs
+% save Vs1w Vs
