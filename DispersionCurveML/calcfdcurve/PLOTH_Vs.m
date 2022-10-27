@@ -20,9 +20,13 @@ clc;
 
 H_all(1) = 2;
 H_all_sum(1) = H_all(1);
-L = 8;
-for i =2:1:L
-    H_all(i) = H_all(i-1)*1.2;
+L = 10;
+for i =1:1:L
+    H_all(i) = 3;
     H_all_sum(i) = sum(H_all(1:i));
 end
-H_all_sum(end)
+
+Vs = [1,1,2,2,3,3,4,4,5,5,8];
+
+stairs([0,H_all_sum],Vs)
+

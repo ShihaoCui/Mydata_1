@@ -1,0 +1,55 @@
+clear;
+clc;
+
+
+L = 10;
+
+% density
+den = ones(1,L+1);
+den = 1800*den;
+
+
+% frequency
+f = [7:1:39];
+
+% H
+for i=1:1:L
+    H(i) = 3;
+end
+
+% VS
+V1 = 200*(1+0.2*rand);
+V2 = 250*(1+0.2*rand);
+V3 = *(1+0.2*rand);
+V4 = 400*(1+((-1)^(round(rand*10)))*0.2*rand);
+V5 = 400*(1+0.2*rand);
+
+VS = [   V1 V1*(1+0.1*rand) ...
+         V2 V2*(1+0.1*rand) ...
+         V3 V3*(1+0.1*rand) ...
+         V4 V4*(1-((-1)^(rand))*0.1*rand) ...
+         V5 V5*(1+0.1*rand) ...
+         600];
+     
+for i=1:1:L
+    H_all(i) = sum(H(1:i));
+end
+
+figure()
+stairs([0,H_all]',VS)
+% VP
+VP = VS*sqrt(4);
+% base mode of R waves
+pvrl=calcbase(f,VS,H,VP,den);
+
+
+figure()
+plot(f,pvrl)
+hold on
+% load('Disp_curve_exp.mat')
+load('dpc_26_Intp_all.mat')
+
+b = a(12,:,:);
+b = reshape(b,2,33);
+scatter(b(1,:),b(2,:))
+legend('sim','exp')
