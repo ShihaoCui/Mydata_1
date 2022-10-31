@@ -30,7 +30,7 @@ function [H, VS, VP, den] = Layers_set_gen_Markov_fun_1()
    lbd_min = 0.01;
    lbd_max = 0.2;
    
-   tau = 0.8;
+   tau = 0.5;
    alpha= rand;
    
    
@@ -125,5 +125,5 @@ VS = VS;
 VP = VP;
 H = H;
 % VS
-% stairs([0,H_k],VS);
+stairs([0,H_k],VS);
 end
