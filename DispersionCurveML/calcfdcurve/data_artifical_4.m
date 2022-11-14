@@ -96,3 +96,5 @@ pvrl=calcbase(f,VS,H,VP,den);
 % scatter(b(1,:),b(2,:))
 % legend('sim','exp')
 end
+
+save Data_a4 VsF Dpr
