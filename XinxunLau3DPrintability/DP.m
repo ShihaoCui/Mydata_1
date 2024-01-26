@@ -17,4 +17,21 @@ for i=1:1:size(Data2,1)
     end
 end
 
+kk = 0;
+Data4 = [];
+for i=1:1:size(Data2,1)
+   if (Data2(i,2)>=0) && (Data2(i,2)<=0.2)
+        Data4 = [Data4;Data2(i,:)];
+        kk=kk+1;
+    end
+end
 
+
+zz = 0;
+Data5 = [];
+for i=1:1:size(Data2,1)
+   if (Data2(i,3)>0)
+        Data5 = [Data5;Data2(i,:)];
+        zz=zz+1;
+    end
+end
