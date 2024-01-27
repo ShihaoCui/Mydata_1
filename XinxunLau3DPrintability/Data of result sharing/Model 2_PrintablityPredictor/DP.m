@@ -35,4 +35,9 @@ for i=1:1:48
     end
 end
 
-save Data4_2 Data4_2 
+% save Data4_2 Data4_2 
+
+[AA,I] = sort(Data4_2(:,1));
+BB = Data4_2(I,:);
+Data4_3 = BB;
+% save Data4_3 Data4_3
