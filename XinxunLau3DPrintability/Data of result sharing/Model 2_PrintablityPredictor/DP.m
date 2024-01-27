@@ -1,0 +1,18 @@
+clear all;
+clc;
+close all;
+
+load('Data4.mat')
+scatter([1:1:48],Data4(:,1));
+
+sd = Data4(:,1);
+
+% size(find(sd<0.01 & sd>=0.0))
+
+sd1 = 1-sd/0.2;
+Data4_1 = Data4;
+
+Data4_1(:,1) = sd1;
+
+
+
