@@ -55,3 +55,5 @@ for i=1:1:48
         Data4_4(i,1) = 2;
     end
 end
+
+% save Data4_4 Data4_4
