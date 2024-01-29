@@ -15,6 +15,8 @@ load('x_selected.mat')
 
 y_train1 = [y_train;y_test_no];
 x_train1 = [x_train;x_test_no];
+save x_train1 x_train1
+save y_train1 y_train1
 
 x_test1 = x_test1;
 y_test1 = y_test1;
