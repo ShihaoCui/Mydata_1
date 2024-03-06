@@ -5,7 +5,7 @@ clc;
 u1_max = 25*10^3; %Kpa
 u1_min = 1*10^3; % Kpa
 
-u2_max = 0; % Pa*s
+u2_max = 1; % Pa*s
 u2_min = 10; % Pa*s
 
 freq = [10:1:50]*10;
