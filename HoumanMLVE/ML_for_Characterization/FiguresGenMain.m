@@ -15,7 +15,7 @@ v = [1:1:100]*0.1;
 tic;
 
 SampleNo = 1;
-SampleNoMax = 5000;
+SampleNoMax = 100000;
 PicData = [];
 LabelAll = [];% [u1,u2]
 VsAnyAll = [];
@@ -52,4 +52,4 @@ end
 elapsed_time = toc;
 disp(['Time needed：', num2str(elapsed_time), ' s']);
 
-save DataTrainViscoElatic PicData LabelAll VsAnyAll
+save DataTrainViscoElatic PicData LabelAll VsAnyAll '-v7.3'
