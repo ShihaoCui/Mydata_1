@@ -8,14 +8,14 @@ u1_min = 1*10^3; % Kpa
 u2_max = 0; % Pa*s
 u2_min = 10; % Pa*s
 
-freq = [1:2:50]*10;
-v = [1:2:50]*0.2;
+freq = [10:1:50]*10;
+v = [1:1:100]*0.1;
 
 % Time start
 tic;
 
 SampleNo = 1;
-SampleNoMax = 10000;
+SampleNoMax = 5000;
 PicData = [];
 LabelAll = [];% [u1,u2]
 VsAnyAll = [];
@@ -42,7 +42,6 @@ SampleNo = SampleNo+1;
 % title('CWT DPR');
 % xlabel('Fre(Hz)');
 % ylabel('Phase velosity (m/s)');
-
 % hold on
 % plot(freq,Vs,'LineWidth', 5);
 
