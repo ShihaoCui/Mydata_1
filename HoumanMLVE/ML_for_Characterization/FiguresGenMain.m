@@ -9,13 +9,13 @@ u2_max = 1; % Pa*s
 u2_min = 10; % Pa*s
 
 freq = [10:1:50]*10;
-v = [1:1:100]*0.1;
+v = [1:1:50]*0.2;
 
 % Time start
 tic;
 
 SampleNo = 1;
-SampleNoMax = 100000;
+SampleNoMax = 10000;
 PicData = [];
 LabelAll = [];% [u1,u2]
 VsAnyAll = [];
