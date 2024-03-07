@@ -15,7 +15,7 @@ v = [1:1:50]*0.2;
 tic;
 
 SampleNo = 1;
-SampleNoMax = 10000;
+SampleNoMax = 1;
 PicData = [];
 LabelAll = [];% [u1,u2]
 VsAnyAll = [];
@@ -34,15 +34,15 @@ VsAnyAll(SampleNo,:) = Vs;
 
 SampleNo = SampleNo+1;
 
-% figure
-% imagesc(freq,v,pic');
-% colormap(jet);
-% colorbar;
-% set(gca,'YDir','normal');
-% title('CWT DPR');
-% xlabel('Fre(Hz)');
-% ylabel('Phase velosity (m/s)');
-% hold on
+figure
+imagesc(freq,v,pic');
+colormap(jet);
+colorbar;
+set(gca,'YDir','normal');
+title('CWT DPR');
+xlabel('Fre(Hz)');
+ylabel('Phase velosity (m/s)');
+hold on
 % plot(freq,Vs,'LineWidth', 5);
 
 end
@@ -52,5 +52,5 @@ end
 elapsed_time = toc;
 disp(['Time needed：', num2str(elapsed_time), ' s']);
 
-save DataTrainViscoElatic PicData LabelAll VsAnyAll
+% save DataTrainViscoElatic PicData LabelAll VsAnyAll
 % '-v7.3'

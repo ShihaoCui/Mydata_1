@@ -1,4 +1,4 @@
 load('DataTrainViscoElatic.mat')
-pics = PicData(:,:,20);
+pics = PicData(:,:,50);
 
 picjpg(:,:,1);
