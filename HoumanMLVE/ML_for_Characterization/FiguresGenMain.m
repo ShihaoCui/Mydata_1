@@ -25,6 +25,7 @@ u1 = rand*(u1_max-u1_min)+u1_min;
 u2 = rand*(u2_max-u2_min)+u2_min;
 rho = 1000;
 
+
 pic= FiguresGenFun(u1, u2,rho, freq,v);
 PicData(:,:,SampleNo) = pic;
 LabelAll(SampleNo,:) = [u1,u2];
