@@ -8,6 +8,7 @@ u1_min = 1*10^3; % Kpa 1
 u2_max = 10; % Pa*s 10
 u2_min = 1; % Pa*s 1
 
+thrRang = [0.95 0.99];
 freq = [10:1:50]*10;
 v = [1:1:50]*0.2;
 
@@ -15,7 +16,8 @@ v = [1:1:50]*0.2;
 tic;
 
 SampleNo = 1;
-SampleNoMax = 25000;
+SampleNoMax = 5000;
+
 PicData = [];
 LabelAll = [];% [u1,u2]
 VsAnyAll = [];
@@ -25,7 +27,7 @@ u1 = rand*(u1_max-u1_min)+u1_min;
 u2 = rand*(u2_max-u2_min)+u2_min;
 rho = 1000;
 
-thrRang = [0.7 0.99];
+
 thr=(thrRang(2)-thrRang(1))*rand+thrRang(1);
 
 pic= FiguresGenFun(u1, u2,rho, freq,v,thr);
