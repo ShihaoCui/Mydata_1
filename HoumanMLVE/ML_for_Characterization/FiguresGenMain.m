@@ -5,8 +5,8 @@ clc;
 u1_max = 3*10^3; %Kpa 25
 u1_min = 1*10^3; % Kpa 1
 
-u2_max = 1; % Pa*s 1
-u2_min = 3; % Pa*s 10
+u2_max = 3; % Pa*s 10
+u2_min = 1; % Pa*s 1
 
 freq = [10:1:50]*10;
 v = [1:1:50]*0.2;
@@ -53,7 +53,7 @@ end
 
 % Time elapse and output
 elapsed_time = toc;
-disp(['Time needed：', num2str(elapsed_time), ' s']);
+disp(['Time needed：', num2str(elapsed_time/60), ' mins']);
 
 % save DataTrainViscoElatic PicData LabelAll VsAnyAll
 % '-v7.3'
