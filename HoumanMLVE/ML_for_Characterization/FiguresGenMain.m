@@ -15,7 +15,7 @@ v = [1:1:50]*0.2;
 tic;
 
 SampleNo = 1;
-SampleNoMax = 20000;
+SampleNoMax = 50000;
 PicData = [];
 LabelAll = [];% [u1,u2]
 VsAnyAll = [];
