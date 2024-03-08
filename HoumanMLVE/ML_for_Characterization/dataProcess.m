@@ -36,7 +36,7 @@ Vs= DPRFun(u1, u2,rho, freq);
 plot(freq,Vs,'LineWidth', 5);
 
 
-pic= FiguresGenFun(u1, u2,rho, freq,v);
+pic= FiguresGenFun(u1, u2,rho, freq,v,0.95);
 Vs= DPRFun(u1, u2,rho, freq);
 subplot(1,2,2)
 imagesc(freq,v,pic');

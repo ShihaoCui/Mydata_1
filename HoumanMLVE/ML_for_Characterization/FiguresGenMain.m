@@ -2,11 +2,11 @@ clear all;
 close all;
 clc;
 
-u1_max = 25*10^3; %Kpa
-u1_min = 1*10^3; % Kpa
+u1_max = 3*10^3; %Kpa 25
+u1_min = 1*10^3; % Kpa 1
 
-u2_max = 1; % Pa*s
-u2_min = 10; % Pa*s
+u2_max = 1; % Pa*s 1
+u2_min = 3; % Pa*s 10
 
 freq = [10:1:50]*10;
 v = [1:1:50]*0.2;
@@ -15,7 +15,7 @@ v = [1:1:50]*0.2;
 tic;
 
 SampleNo = 1;
-SampleNoMax = 50000;
+SampleNoMax = 5000;
 PicData = [];
 LabelAll = [];% [u1,u2]
 VsAnyAll = [];
