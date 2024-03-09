@@ -16,7 +16,7 @@ v = [1:1:50]*0.2;
 tic;
 
 SampleNo = 1;
-SampleNoMax = 5000;
+SampleNoMax = 1;
 
 PicData = [];
 LabelAll = [];% [u1,u2]
@@ -39,16 +39,16 @@ VsAnyAll(SampleNo,:) = Vs;
 
 SampleNo = SampleNo+1;
 
-% figure
-% imagesc(freq,v,pic');
-% colormap(jet);
-% colorbar;
-% set(gca,'YDir','normal');
-% title('CWT DPR');
-% xlabel('Fre(Hz)');
-% ylabel('Phase velosity (m/s)');
-% hold on
-% plot(freq,Vs,'LineWidth', 5);
+figure
+imagesc(freq,v,pic');
+colormap(jet);
+colorbar;
+set(gca,'YDir','normal');
+title('CWT DPR');
+xlabel('Fre(Hz)');
+ylabel('Phase velosity (m/s)');
+hold on
+plot(freq,Vs,'LineWidth', 5);
 
 end
 
