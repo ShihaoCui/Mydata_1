@@ -17,10 +17,15 @@ freq = [10:1:50]*10;
 v = [1:1:50]*0.2;
 
 % DPR extracted from wavelet energy analysis
+load('E_filter2.mat')
+pic_sim2 = E_filter;
+pic_sim2 = (fliplr(E_filter));
+
 load('E_filter1.mat')
 pic_sim1 = E_filter;
 pic_sim1 = (fliplr(E_filter));
-% % pic_sim1 = pic_sim1;
+
+
 
 figure
 subplot(1,2,1)
@@ -50,5 +55,5 @@ hold on
 plot(freq,Vs,'LineWidth', 5);
 
 pics_sim(1,:,:) = [pic_sim1];
-pics_sim(2,:,:) = [pic];
+pics_sim(2,:,:) = [pic_sim1];
 % save pics_sim pics_sim
