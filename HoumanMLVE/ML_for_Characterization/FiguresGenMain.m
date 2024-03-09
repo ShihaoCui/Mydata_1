@@ -2,10 +2,10 @@ clear all;
 close all;
 clc;
 
-u1_max = 25*10^3; %Kpa 25
+u1_max = 3*10^3; %Kpa 25
 u1_min = 1*10^3; % Kpa 1
 
-u2_max = 10; % Pa*s 10
+u2_max = 3; % Pa*s 10
 u2_min = 1; % Pa*s 1
 
 thrRang = [0.98 0.99];
