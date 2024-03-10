@@ -39,7 +39,7 @@ grid;
 
 
 %*********1. Transfer function*********%
-u1 = 8*10^3; % KPa
+u1 = 10*10^3; % KPa
 u2 = 7; % Pa*s
 rho=1000;
 omega = 2*pi*f;
