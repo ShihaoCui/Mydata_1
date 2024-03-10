@@ -56,4 +56,4 @@ plot(freq,Vs,'LineWidth', 5);
 
 pics_sim(1,:,:) = [pic_sim1];
 pics_sim(2,:,:) = [pic_sim2];
-% save pics_sim pics_sim
+save pics_sim pics_sim
