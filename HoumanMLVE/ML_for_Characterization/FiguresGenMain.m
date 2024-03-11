@@ -8,7 +8,7 @@ u1_min = 1*10^3; % Kpa 1
 u2_max = 3; % Pa*s 10
 u2_min = 1; % Pa*s 1
 
-thrRang = [0.98 0.99];
+thrRang = [0.8 0.99];
 freq = [10:1:50]*10;
 v = [1:1:50]*0.2;
 
@@ -41,14 +41,14 @@ SampleNo = SampleNo+1;
 
 figure
 imagesc(freq,v,pic');
-colormap(jet);
+colormap('jet');
 colorbar;
 set(gca,'YDir','normal');
-title('CWT DPR');
-xlabel('Fre(Hz)');
+% title('CWT DPR');
+xlabel('Frequency(Hz)');
 ylabel('Phase velosity (m/s)');
-hold on
-plot(freq,Vs,'LineWidth', 5);
+% hold on
+% plot(freq,Vs,'LineWidth', 5);
 
 end
 
