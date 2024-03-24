@@ -29,6 +29,7 @@ rho = 1000;
 
 
 thr=(thrRang(2)-thrRang(1))*rand+thrRang(1);
+% thr=0.9;
 
 pic= FiguresGenFun(u1, u2,rho, freq,v,thr);
 PicData(:,:,SampleNo) = pic;
@@ -39,14 +40,14 @@ VsAnyAll(SampleNo,:) = Vs;
 
 SampleNo = SampleNo+1;
 
-figure
-imagesc(freq,v,pic');
-colormap('jet');
-colorbar;
-set(gca,'YDir','normal');
-% title('CWT DPR');
-xlabel('Frequency(Hz)');
-ylabel('Phase velosity (m/s)');
+% figure
+% imagesc(freq,v,pic'+0*rand(size(pic')));
+% colormap('jet');
+% colorbar;
+% set(gca,'YDir','normal');
+% % title('CWT DPR');
+% xlabel('Frequency(Hz)');
+% ylabel('Phase velosity (m/s)');
 % hold on
 % plot(freq,Vs,'LineWidth', 5);
 
