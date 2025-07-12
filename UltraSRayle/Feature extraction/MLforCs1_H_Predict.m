@@ -23,7 +23,7 @@ Y = (H_all_ALL-min(H_all_ALL))./(max(H_all_ALL)-min(H_all_ALL));
 Y = Y';
 
 
-
+save DataLoad X Y
 
 
 
