@@ -35,7 +35,7 @@ data1 = data1_interp;
 % sss = 500;
 % data(1:sss,1:11) = data1(1:sss,1:11);
 % data = data1(1:2000,5:2:11);% 结果不错
-data = data1(1:2000*scale_factor,6:1:13);% 结果不错
+data = data1(1:2000*scale_factor,5:1:12);% 结果不错
 % data = data1(1:2000,1:2:10);% 结果不错
 
 
@@ -52,7 +52,7 @@ dx = 0.5/1000; % m %% 两个 接收器的 距离
 L = (N-1)*dx; 
 
 % [u,T,Tmax,L,x] = MASWaves_read_data(Filename,HeaderLines,fs,N,dx,x1,Direction);
-u = data(1:end,1:end)./max(max(data))*1e-5;
+u = data(1:end,1:end)./max(max(data))*3e-6;
 % Time of individual recordings [s]
 % T = data1(:,1)./1e6; 
 T = (1:size(u,1))./fs;
@@ -125,3 +125,15 @@ axis xy
 set(gca, 'YDir', 'normal')
 xlim([0 1000])
 % save disp_extracted fplot Cph_exp
+
+
+figure
+imagesc(1:8, [1:2000]./fs, u);
+
+% 设置坐标轴
+set(gca, 'YDir', 'normal'); % y轴从下往上增加
+xlabel('Receiver Number');
+ylabel('Time (s)');
+colormap('jet');       % 彩色
+% colorbar;
+% title('Matrix u');

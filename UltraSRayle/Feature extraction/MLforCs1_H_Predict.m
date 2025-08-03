@@ -5,30 +5,30 @@ rng(0);
 
 load('DATA_ALL_ML.mat')
 
-selected_fre_range  = round([1:20:700]);
+selected_fre_range  = round([11:20:701]);
 
 for i=1:1:length(DISP_ALL_cutoff)
    DISP_Selected(:,i) = DISP_ALL_cutoff{i, 1}(round(selected_fre_range),end); %800/2 Hz range
    Fre_Selected(:,i) = DISP_ALL_cutoff{i, 1}(round(selected_fre_range),1); %800/2 Hz range 
 end
-X = [cs2_all_ALL,Cutoff_Freq_all,DISP_Selected'./cs2_all_ALL];
+X = [cs2_all_ALL,Cutoff_Freq_all,DISP_Selected'];
 
-X = X';
+
 
 
 % Y = cs1_all_ALL;
-Y = (H_all_ALL-min(H_all_ALL))./(max(H_all_ALL)-min(H_all_ALL));
-% Y = [H_all_ALL,cs1_all_ALL];
+% Y = (H_all_ALL-min(H_all_ALL))./(max(H_all_ALL)-min(H_all_ALL));
+Y = [cs1_all_ALL,H_all_ALL];
 % Y = (Y-min(Y))./(max(Y)-min(Y));
-Y = Y';
+
 
 
 save DataLoad X Y
 
 
 
-
-
+X = X';
+Y = Y';
 
 train_no = floor(0.9*size(X,2));
 % 假设 X_train 是输入数据，Y_train 是目标标签
